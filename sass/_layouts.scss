@@ -1,0 +1,38 @@
+.mr-small {
+  margin-right: 2rem;
+}
+
+.mr-med {
+  margin-right: 4rem;
+}
+.mr-large {
+  margin-right: 6rem;
+}
+.mr-huge {
+  margin-right: 8rem;
+}
+
+.ml-small {
+  margin-left: 2rem;
+}
+
+.ml-med {
+  margin-left: 4rem;
+}
+.ml-large {
+  margin-left: 6rem;
+}
+.ml-huge {
+  margin-left: 8rem;
+}
+
+.col-sec {
+  color: $color-secondary;
+}
+.col-prime {
+  color: $color-primary;
+}
+
+.upper {
+  text-transform: uppercase;
+}
