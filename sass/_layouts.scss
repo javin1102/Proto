@@ -32,7 +32,23 @@
 .col-prime {
   color: $color-primary;
 }
-
+.col-white {
+  color: white;
+}
 .upper {
   text-transform: uppercase;
+}
+
+.mt-small {
+  margin-top: 2rem;
+}
+
+.mt-med {
+  margin-top: 4rem;
+}
+.mt-large {
+  margin-top: 6rem;
+}
+.mt-huge {
+  margin-top: 8rem;
 }

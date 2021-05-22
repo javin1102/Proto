@@ -1,0 +1,9 @@
+@mixin card($content) {
+  content: $content;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba($color-primary, 0.15);
+}

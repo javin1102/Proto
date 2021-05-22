@@ -15,6 +15,9 @@ body {
   &__3 {
     font-size: 1.3rem;
   }
+  &__4 {
+    font-size: 0.8rem;
+  }
 }
 
 .title {
@@ -36,6 +39,12 @@ body {
 .third {
   &__desc {
     font-size: 0.9rem;
+    text-align: center;
+  }
+
+  & .card__desc {
+    width: 80%;
+    font-size: 0.75rem;
     text-align: center;
   }
 }
