@@ -11,7 +11,12 @@ body {
   &__2 {
     font-size: 1.75rem;
   }
+
+  &__3 {
+    font-size: 1.3rem;
+  }
 }
+
 .title {
   text-transform: uppercase;
   -webkit-background-clip: text;
@@ -20,6 +25,19 @@ body {
   color: transparent;
   display: inline-block;
   pointer-events: none;
+}
+
+.second {
+  &__desc {
+    font-size: 0.9rem;
+  }
+}
+
+.third {
+  &__desc {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
 
 a {

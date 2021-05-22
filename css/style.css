@@ -53,6 +53,9 @@ body {
 .heading__2 {
   font-size: 1.75rem; }
 
+.heading__3 {
+  font-size: 1.3rem; }
+
 .title {
   text-transform: uppercase;
   -webkit-background-clip: text;
@@ -61,6 +64,13 @@ body {
   color: transparent;
   display: inline-block;
   pointer-events: none; }
+
+.second__desc {
+  font-size: 0.9rem; }
+
+.third__desc {
+  font-size: 0.9rem;
+  text-align: center; }
 
 a {
   text-decoration: none; }
@@ -161,3 +171,46 @@ li {
     font-weight: 300;
     color: #707070;
     margin: 1.4rem 0; }
+
+.second {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 153, 255, 0.15);
+  padding: 5rem; }
+  .second__upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem; }
+    .second__upper p {
+      width: 40%;
+      text-align: center;
+      color: #1d2671;
+      margin-top: 1rem; }
+  .second__below {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, min-content));
+    align-items: center;
+    justify-content: center;
+    grid-gap: 2rem; }
+    .second__below__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .second__below__box h3 {
+        margin: 1rem 0; }
+      .second__below__box p {
+        text-align: center;
+        font-size: 0.76rem; }
+
+.third {
+  padding: 5rem; }
+  .third__upper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+  .third__desc {
+    width: 50%;
+    margin-top: 0.6rem; }
