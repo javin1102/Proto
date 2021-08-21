@@ -8,5 +8,5 @@ This is my first landing page that i design using figma and built it myself
 - HTML
 - css / scss
 
-##Website URL:
+## Website URL
 https://javin1102.github.io/Proto/
