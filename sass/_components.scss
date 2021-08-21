@@ -11,31 +11,65 @@ main {
   display: flex;
   height: 7rem;
   align-items: center;
+  padding: 2rem 3rem;
+  height: fit-content;
+
+  @include respond(phone-2) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
   & .logo {
-    margin-left: 3rem;
     margin-right: 1.5rem;
   }
   &__left {
-    flex: 0 0 30%;
     display: flex;
     align-items: center;
-    margin-right: auto;
+    @include respond(phone-2) {
+      width: 100%;
+      flex: 0;
+      padding: 2rem;
+    }
   }
   &__right {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10rem;
+    margin-left: auto;
+    @include respond(phone-2) {
+      margin-left: 0;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  @include respond(phone-2) {
+    .header__list-active {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
+      height: fit-content;
+    }
   }
   &__list {
     display: flex;
-    flex: 0 0 70%;
     font-size: 1.3rem;
     justify-content: center;
-    margin-right: 5rem;
     font-weight: 300;
 
-    & li {
+    @include respond(phone-2) {
+      flex-direction: column;
+      background-color: $color-primary;
+      transition: transform 0.25s;
+      transform: scaleY(0);
+      transform-origin: top;
+      flex: 1;
+      visibility: hidden;
+      height: 0;
+      opacity: 0;
+    }
+
+    * & li {
       transform: translate(0);
       transition: transform 0.2s;
       &:active {
@@ -44,9 +78,14 @@ main {
       &:not(:last-child) {
         margin-right: 3rem;
       }
-
+      @include respond(phone-2) {
+        margin: 0;
+        padding: 0.8rem 0;
+        &:not(:last-child) {
+          margin: 0;
+        }
+      }
       & a {
-        color: $color-primary;
         transition: all 0.2s;
         &:hover {
           text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -54,9 +93,48 @@ main {
         &:active {
           color: rgba($color-primary, $alpha: 0.3);
         }
+
+        @include respond(phone-2) {
+          color: white;
+          background-color: none;
+          border: none;
+          text-align: start;
+          font-size: 1.3rem;
+          padding: 0;
+          margin-left: 4rem;
+
+          &:active {
+            color: $color-secondary;
+            border: none;
+            border-radius: 0;
+          }
+        }
       }
     }
   }
+}
+
+.hamburger {
+  display: none;
+
+  @include respond(phone-2) {
+    display: inline-block;
+  }
+  margin-left: auto;
+  & span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.hamburger__list {
+  display: block;
 }
 
 .btn {
@@ -127,8 +205,20 @@ main {
 
 .first {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-evenly;
+
+  @include respond(phone-2) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+    padding: 3rem;
+  }
+  @include respond(phone) {
+    padding: 3rem 0;
+  }
   &__right {
     & img {
       width: 30rem;
@@ -151,17 +241,22 @@ main {
 
 .second {
   display: flex;
+  width: 100%;
   flex-direction: column;
   background-color: rgba($color-primary, 0.15);
   padding: 5rem;
+  @include respond(phone-small) {
+    padding: 5rem 2rem;
+  }
   &__upper {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5rem;
+    flex-wrap: wrap;
 
     & p {
-      width: 40%;
+      width: 70%;
       text-align: center;
       color: $color-secondary;
       margin-top: 1rem;
@@ -180,13 +275,18 @@ main {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
+
+      & img {
+        width: 10rem;
+      }
 
       & h3 {
         margin: 1rem 0;
       }
       & p {
         text-align: center;
-        font-size: 0.76rem;
+        font-size: 0.89rem;
       }
     }
   }
@@ -194,6 +294,7 @@ main {
 
 .third {
   padding: 5rem;
+  width: 100%;
   &__upper {
     display: flex;
     justify-content: center;
@@ -201,7 +302,7 @@ main {
     align-items: center;
   }
   &__desc {
-    width: 50%;
+    width: 80%;
     margin-top: 0.6rem;
   }
 
@@ -226,10 +327,6 @@ main {
       }
       & .card__desc {
         color: $color-gray;
-        // margin-top: 3rem 0;
-      }
-      & h3 {
-        // margin: 2rem 0;
       }
     }
 
@@ -259,6 +356,13 @@ main {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 0;
+
+  & h4 {
+    @include respond(phone-small) {
+      font-size: 0.6rem;
+    }
+  }
+
   &__logo {
     display: flex;
     align-items: center;
@@ -266,10 +370,15 @@ main {
 
     & h2 {
       margin-left: 1rem;
+      font-size: 1rem;
     }
     & img {
       width: 2.25rem;
       height: 2.25rem;
+      @include respond(phone-small) {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
     }
   }
   &__policy {
@@ -287,4 +396,45 @@ main {
       }
     }
   }
+}
+
+/* Icon 3 */
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 18px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 36px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }

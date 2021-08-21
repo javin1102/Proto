@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="sass/main.css" />
     <title>Proto</title>
   </head>
   <body>
@@ -21,17 +21,37 @@
       <div class="header__left">
         <img src="images/Logo/Logo.png" alt="Logo" class="logo" />
         <h2 class="heading__2 title">Proto</h2>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
+
       <div class="header__right">
         <ul class="header__list">
           <li class="header__list--item"><a href="#">Home</a></li>
           <li class="header__list--item"><a href="#">About</a></li>
           <li class="header__list--item"><a href="#">Services</a></li>
+          <li class="header__list--item">
+            <a href="#" id="login" class="btn btn-blue-white">Login</a>
+          </li>
+          <li class="header__list--item">
+            <a href="#" id="signup" class="btn btn-white-blue">Sign Up</a>
+          </li>
         </ul>
-        <a href="#" class="btn btn-blue-white mr-small">Login</a>
-        <a href="#" class="btn btn-white-blue">Sign Up</a>
       </div>
     </header>
+
+    <!-- <nav>
+      <ul class="hamburger__list">
+        <li class="hamburger__list--item"><a href="#">Home</a></li>
+        <li class="hamburger__list--item"><a href="#">About</a></li>
+        <li class="hamburger__list--item"><a href="#">Services</a></li>
+        <li class="hamburger__list--item"><a href="#">Login</a></li>
+        <li class="hamburger__list--item"><a href="#">Sign Up</a></li>
+      </ul>
+    </nav> -->
 
     <main>
       <section class="first">
@@ -52,7 +72,11 @@
             felis a rutrum. Curabitur orci magna, ullamcorper sit amet elit sit
             amet, auctor posuere mi.
           </p>
-          <a href="#" class="btn btn-darkblue-white">Get Started &rarr;</a>
+          <div class="test">
+            <a href="#" class="btn btn-darkblue-white d-i-b"
+              >Get Started &rarr;</a
+            >
+          </div>
         </div>
 
         <div class="first__right">
@@ -84,7 +108,7 @@
 
           <div class="second__below__box">
             <img src="images/Icons/icon2.png" alt="icon2" />
-            <h3 class="heading__3">Friendly Developer</h3>
+            <h3 class="heading__3">Free Consultation</h3>
             <p class="second__desc">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
               necessitatibus reiciendis? Magni odio itaque at quasi fuga ut,
@@ -95,7 +119,7 @@
 
           <div class="second__below__box">
             <img src="images/Icons/icon3.png" alt="icon3" />
-            <h3 class="heading__3">Friendly Developer</h3>
+            <h3 class="heading__3">Cheap Price</h3>
             <p class="second__desc">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Obcaecati explicabo porro veniam tempore, rem excepturi eius
@@ -105,7 +129,7 @@
 
           <div class="second__below__box">
             <img src="images/Icons/icon4.png" alt="icon4" />
-            <h3 class="heading__3">Friendly Developer</h3>
+            <h3 class="heading__3">Many Discounts</h3>
             <p class="second__desc">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
               blanditiis adipisci exercitationem ipsa quas inventore quasi
@@ -116,7 +140,7 @@
 
           <div class="second__below__box">
             <img src="images/Icons/icon5.png" alt="icon5" />
-            <h3 class="heading__3">Friendly Developer</h3>
+            <h3 class="heading__3">Responsive Design</h3>
             <p class="second__desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               nisi ea voluptatibus possimus quos praesentium.
@@ -125,7 +149,7 @@
 
           <div class="second__below__box">
             <img src="images/Icons/icon6.png" alt="icon6" />
-            <h3 class="heading__3">Friendly Developer</h3>
+            <h3 class="heading__3">Trustworthy</h3>
             <p class="second__desc">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima
               reprehenderit iusto maxime unde, in itaque laudantium vero nihil
@@ -199,5 +223,7 @@
         <h4 class="heading__4 col-white">Terms and Conditions</h4>
       </div>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
